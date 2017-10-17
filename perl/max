@@ -1,0 +1,20 @@
+#!/usr/bin/env perl
+
+sub max {
+    my ( $now_max ) = shift @_ ;
+    foreach ( @_ ) {
+        if ( $_ > $now_max ) {
+            $now_max = $_  ;
+        }
+    }
+    $now_max ;
+}
+
+@num = <STDIN> ;
+
+$max = &max(@num) ;
+
+print  "the max number is:$max \n"
+
+
+###输入数值之后按ctrl + d退出,一行一个数值，输完之后回车再输入另外一个。
